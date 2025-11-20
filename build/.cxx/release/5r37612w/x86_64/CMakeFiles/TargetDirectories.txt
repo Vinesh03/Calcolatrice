@@ -1,0 +1,2 @@
+C:/Users/Vinesh/Downloads/calcolatrice_seeker86/build/.cxx/release/5r37612w/x86_64/CMakeFiles/edit_cache.dir
+C:/Users/Vinesh/Downloads/calcolatrice_seeker86/build/.cxx/release/5r37612w/x86_64/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,10 @@
+^C:\USERS\VINESH\DOWNLOADS\CALCOLATRICE_SEEKER86\BUILD\WINDOWS\X64\CMAKEFILES\8B897F6BC0D636D7BD3A60F621998036\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/Vinesh/Downloads/calcolatrice_seeker86/windows -BC:/Users/Vinesh/Downloads/calcolatrice_seeker86/build/windows/x64 --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Vinesh/Downloads/calcolatrice_seeker86/build/windows/x64/calcolatrice_seeker86.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

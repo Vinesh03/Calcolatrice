@@ -1,0 +1,28 @@
+^C:\USERS\VINESH\DOWNLOADS\CALCOLATRICE_SEEKER86\BUILD\WINDOWS\X64\CMAKEFILES\D54D874E66F55D05D00653DDCAA7E880\FLUTTER_WINDOWS.DLL.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=C:\Users\Vinesh\Documents\Flutter\flutter PROJECT_DIR=C:\Users\Vinesh\Downloads\calcolatrice_seeker86 FLUTTER_ROOT=C:\Users\Vinesh\Documents\Flutter\flutter FLUTTER_EPHEMERAL_DIR=C:\Users\Vinesh\Downloads\calcolatrice_seeker86\windows\flutter\ephemeral PROJECT_DIR=C:\Users\Vinesh\Downloads\calcolatrice_seeker86 FLUTTER_TARGET=lib\main.dart DART_DEFINES=RkxVVFRFUl9WRVJTSU9OPTMuMzguMA==,RkxVVFRFUl9DSEFOTkVMPXN0YWJsZQ==,RkxVVFRFUl9HSVRfVVJMPWh0dHBzOi8vZ2l0aHViLmNvbS9mbHV0dGVyL2ZsdXR0ZXIuZ2l0,RkxVVFRFUl9GUkFNRVdPUktfUkVWSVNJT049YTBlOWI5ZGJmNw==,RkxVVFRFUl9FTkdJTkVfUkVWSVNJT049Y2I0NjdlMzFhNQ==,RkxVVFRFUl9EQVJUX1ZFUlNJT049My4xMC4wIChidWlsZCAzLjEwLjAtMjkwLjQuYmV0YSk= DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=true PACKAGE_CONFIG=C:\Users\Vinesh\Downloads\calcolatrice_seeker86\.dart_tool\package_config.json C:/Users/Vinesh/Documents/Flutter/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\VINESH\DOWNLOADS\CALCOLATRICE_SEEKER86\BUILD\WINDOWS\X64\CMAKEFILES\EA17A3B59199B65FC6D152D1289574E5\FLUTTER_ASSEMBLE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\VINESH\DOWNLOADS\CALCOLATRICE_SEEKER86\WINDOWS\FLUTTER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/Vinesh/Downloads/calcolatrice_seeker86/windows -BC:/Users/Vinesh/Downloads/calcolatrice_seeker86/build/windows/x64 --check-stamp-file C:/Users/Vinesh/Downloads/calcolatrice_seeker86/build/windows/x64/flutter/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

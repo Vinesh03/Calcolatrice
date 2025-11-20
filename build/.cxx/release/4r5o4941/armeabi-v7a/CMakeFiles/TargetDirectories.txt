@@ -1,0 +1,2 @@
+C:/Users/vines/Downloads/temp/Calcolatrice/calcolatrice_seeker86/build/.cxx/release/4r5o4941/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/vines/Downloads/temp/Calcolatrice/calcolatrice_seeker86/build/.cxx/release/4r5o4941/armeabi-v7a/CMakeFiles/rebuild_cache.dir

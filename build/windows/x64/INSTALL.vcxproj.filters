@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Vinesh\Downloads\calcolatrice_seeker86\build\windows\x64\CMakeFiles\8b897f6bc0d636d7bd3a60f621998036\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{004C3E0B-C36F-348D-A62C-28E79A8208A6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
