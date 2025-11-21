@@ -1,7 +1,8 @@
 import 'dart:math'; // Importato per il colore casuale
 import 'package:flutter/material.dart';
 import 'package:math_expressions/math_expressions.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+// Removed `shared_preferences` to avoid CocoaPods iOS plugin issues on CI.
+// Persistence is disabled; settings and history are kept in-memory during runtime.
 
 void main() async {
   // Assicurati che i binding siano inizializzati prima di operazioni async
@@ -29,14 +30,9 @@ class _CalculatorAppState extends State<CalculatorApp> {
   }
 
   Future<void> _loadSettings() async {
-    final prefs = await SharedPreferences.getInstance();
-    final themeModeIndex = prefs.getInt('themeMode') ?? ThemeMode.system.index;
-    final colorValue = prefs.getInt('colorSchemeSeed') ?? Colors.purple.value;
-
-    setState(() {
-      _themeMode = ThemeMode.values[themeModeIndex];
-      _colorSchemeSeed = Color(colorValue);
-    });
+    // Persistence disabled: use defaults (in-memory only).
+    // If you want persistence later, re-add `shared_preferences` and restore this logic.
+    await Future<void>.delayed(Duration.zero);
   }
 
   // Lista di colori per il selettore
@@ -77,9 +73,8 @@ class _CalculatorAppState extends State<CalculatorApp> {
 
   // Metodo per salvare le impostazioni
   Future<void> _saveSettings() async {
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.setInt('themeMode', _themeMode.index);
-    await prefs.setInt('colorSchemeSeed', _colorSchemeSeed.value);
+    // Persistence disabled: no-op. Re-enable by restoring shared_preferences logic.
+    return;
   }
 
   @override
@@ -176,16 +171,14 @@ class _CalculatorHomePageState extends State<CalculatorHomePage> {
 
   // Metodo per caricare la cronologia
   Future<void> _loadHistory() async {
-    final prefs = await SharedPreferences.getInstance();
-    setState(() {
-      _history.addAll(prefs.getStringList('history') ?? []);
-    });
+    // Persistence disabled: keep history in-memory only during app runtime.
+    await Future<void>.delayed(Duration.zero);
   }
 
   // Metodo per salvare la cronologia
   Future<void> _saveHistory() async {
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.setStringList('history', _history);
+    // Persistence disabled: no-op. Re-enable shared_preferences to persist history.
+    return;
   }
 
   // Metodo per pulire la cronologia
