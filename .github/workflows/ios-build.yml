@@ -1,0 +1,43 @@
+name: iOS CI Build (no codesign)
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build-ios:
+    name: Build iOS app (no codesign)
+    runs-on: macos-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+
+      - name: Install CocoaPods
+        run: |
+          set -eux
+          brew --version || true
+          brew install cocoapods || true
+
+      - name: Flutter pub get
+        run: flutter pub get
+
+      - name: Build iOS IPA (no codesign)
+        run: |
+          set -eux
+          flutter clean
+          flutter pub get
+          # Build an IPA without code signing; artifact will be in build/ios/ipa
+          flutter build ipa --no-codesign --release
+
+      - name: Upload IPA artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios-ipa
+          path: build/ios/ipa/*.ipa
